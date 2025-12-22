@@ -1,36 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emily Li - Professional Portfolio & Therapy Practice Website
+
+A modern, responsive personal website built with Next.js 16, React 19, and Tailwind CSS 4, showcasing Emily Li's professional experience as a mental health therapist, researcher, and UC Berkeley MSW candidate.
+
+## Features
+
+### 🎨 Design
+- **Calm, Therapeutic Aesthetic**: Soft blues, greens, and warm neutrals for a welcoming feel
+- **Dark Mode**: Fully functional dark mode with therapeutic color palette
+- **Responsive Design**: Mobile-first approach, optimized for all devices
+- **Smooth Animations**: Intersection Observer-based scroll animations
+- **Accessibility**: ARIA labels, keyboard navigation, semantic HTML
+
+### 📄 Sections
+1. **Hero Section**: Professional introduction with CTA buttons
+2. **About**: Personal philosophy, specializations, and languages
+3. **Services**: Therapeutic modalities and specialized populations
+4. **Experience**: Interactive timeline with expandable details
+5. **Education**: Academic credentials and certifications
+6. **Publications**: Research work and focus areas
+7. **Contact**: Form with validation and contact information
+8. **Blog**: Prepared structure for future content
+
+### 🛠️ Technical Stack
+- **Framework**: Next.js 16 (App Router)
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS 4
+- **Language**: TypeScript
+- **Fonts**: Geist Sans & Geist Mono
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20+ 
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
-npm run dev
+# Install dependencies
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Run development server
+npm run dev
+# or
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Create optimized production build
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Start production server
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+mywebsite/
+├── app/
+│   ├── blog/
+│   │   └── page.tsx          # Blog listing page
+│   ├── globals.css            # Global styles & CSS variables
+│   ├── layout.tsx             # Root layout with metadata
+│   └── page.tsx               # Home page
+├── components/
+│   ├── About.tsx              # About section
+│   ├── AnimatedSection.tsx    # Scroll animation wrapper
+│   ├── Contact.tsx            # Contact form & info
+│   ├── DarkModeToggle.tsx     # Theme switcher
+│   ├── Education.tsx          # Education & credentials
+│   ├── Experience.tsx         # Work experience timeline
+│   ├── Footer.tsx             # Site footer
+│   ├── Hero.tsx               # Hero section
+│   ├── Navigation.tsx         # Main navigation
+│   ├── Publications.tsx       # Research & publications
+│   └── Services.tsx           # Services & modalities
+├── data/
+│   └── profile.ts             # All profile data
+├── types/
+│   └── index.ts               # TypeScript type definitions
+└── public/                    # Static assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Updating Profile Information
+Edit `data/profile.ts` to update:
+- Personal information
+- Work experience
+- Education
+- Publications
+- Services
+- Skills
+
+### Modifying Colors
+Update CSS variables in `app/globals.css`:
+- Light mode colors in `:root`
+- Dark mode colors in `@media (prefers-color-scheme: dark)`
+
+### Adding Blog Posts
+The blog structure is ready. To add posts:
+1. Create a blog post data structure
+2. Add posts to `app/blog/page.tsx`
+3. Optionally create individual post pages in `app/blog/[slug]/page.tsx`
+
+## Key Features Explained
+
+### Dark Mode
+- Persists user preference in localStorage
+- Smooth transitions between themes
+- Therapeutic color palette for both modes
+
+### Contact Form
+- Client-side validation
+- Ready for backend integration
+- Success/error state handling
+
+### Smooth Scrolling
+- Automatic smooth scroll to sections
+- Mobile-friendly navigation
+- Sticky header with scroll detection
+
+### SEO Optimization
+- Comprehensive metadata
+- OpenGraph tags
+- Semantic HTML structure
+- Descriptive alt texts
+
+## Future Enhancements
+
+- [ ] Blog post functionality with MDX
+- [ ] Contact form backend (API route)
+- [ ] Testimonials section
+- [ ] Photo gallery
+- [ ] Newsletter subscription
+- [ ] Analytics integration
+
+## Deployment
+
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Other Platforms
+The site can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## License
+
+© 2024 Emily Li. All rights reserved.
+
+## Support
+
+For questions or issues, please contact through the website's contact form.
