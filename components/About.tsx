@@ -4,7 +4,7 @@ import { profileData } from '@/data/profile';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-[#0f1419]">
+    <section id="about" className="py-16 bg-white dark:bg-[#0f1419]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -79,9 +79,9 @@ export default function About() {
         <div className="mt-16 p-8 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[var(--soft-teal-50)] dark:to-[var(--calm-blue-50)] rounded-2xl border border-[var(--border)]">
           <blockquote className="text-center">
             <p className="text-xl md:text-2xl font-medium text-foreground italic mb-4">
-              "In addiction care, what looks like 'choice' is often the residue of childhood harm and survival-based neural patterns. Trauma-informed care invites us to look beyond symptoms and help people rebuild safety, connection, and meaning."
+              "What looks like 'choice' is often the residue of childhood harm and survival-based neural patterns. Trauma-informed care invites us to look beyond symptoms and help people rebuild safety, connection, and meaning."
             </p>
-            <cite className="text-foreground/70 font-semibold">— Emily Li</cite>
+            <cite className="text-foreground/70 font-semibold">— Wenqing(Emily) Li</cite>
           </blockquote>
         </div>
       </div>

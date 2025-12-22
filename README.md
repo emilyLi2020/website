@@ -1,6 +1,6 @@
-# Emily Li - Professional Portfolio & Therapy Practice Website
+# Wenqing(Emily) Li - Professional Portfolio & Therapy Practice Website
 
-A modern, responsive personal website built with Next.js 16, React 19, and Tailwind CSS 4, showcasing Emily Li's professional experience as a mental health therapist, researcher, and UC Berkeley MSW candidate.
+A modern, responsive personal website built with Next.js 16, React 19, and Tailwind CSS 4, showcasing Wenqing(Emily) Li's professional experience as a mental health therapist, researcher, and UC Berkeley MSW candidate.
 
 ## Features
 
@@ -167,7 +167,7 @@ The site can be deployed to any platform that supports Next.js:
 
 ## License
 
-© 2024 Emily Li. All rights reserved.
+© 2024 Wenqing(Emily) Li. All rights reserved.
 
 ## Support
 

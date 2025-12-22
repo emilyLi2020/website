@@ -32,14 +32,14 @@ export default function Hero() {
         {/* Profile Image Placeholder */}
         <div className="mb-8 flex justify-center">
           <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] flex items-center justify-center text-white text-4xl font-bold shadow-xl">
-            EL
+            WL
           </div>
         </div>
 
         {/* Name and Credentials */}
-        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+        <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
           {profileData.name}
-          <span className="text-2xl md:text-3xl font-normal text-foreground/70 block mt-2">
+          <span className="text-2xl md:text-3xl font-normal text-foreground/70 block mt-4">
             {profileData.credentials}
           </span>
         </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
             Kaiser Permanente Mental Health Trainee
           </div>
           <div className="px-4 py-2 bg-white/80 dark:bg-[var(--warm-neutral-200)] rounded-full text-sm font-medium text-foreground shadow-sm">
-            UC Berkeley MSW (4.0 GPA)
+            UC Berkeley MSW
           </div>
           <div className="px-4 py-2 bg-white/80 dark:bg-[var(--warm-neutral-200)] rounded-full text-sm font-medium text-foreground shadow-sm">
             Published Researcher

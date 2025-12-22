@@ -4,11 +4,11 @@ import { profileData } from '@/data/profile';
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
+    <section id="education" className="py-16 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Education & Credentials
+            Education
           </h2>
           <div className="w-20 h-1 bg-[var(--primary)] mx-auto rounded-full"></div>
         </div>
@@ -20,7 +20,7 @@ export default function Education() {
               className="bg-white dark:bg-[#0f1419] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               {/* Header with gradient */}
-              <div className="bg-gradient-to-r from-[var(--soft-teal-500)] to-[var(--calm-blue-500)] p-6 text-white">
+              <div className="bg-gradient-to-r from-[var(--soft-teal-500)] to-[var(--calm-blue-500)] p-5 text-white">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-1">{edu.degree}</h3>
@@ -35,7 +35,7 @@ export default function Education() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-5">
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-[var(--soft-teal-100)] dark:bg-[var(--soft-teal-100)] text-[var(--soft-teal-700)] dark:text-[var(--soft-teal-700)] rounded-full text-sm font-medium">
                     {edu.period}
@@ -85,37 +85,6 @@ export default function Education() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Certifications */}
-        <div className="mt-12 bg-white dark:bg-[#0f1419] rounded-2xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Licenses & Certifications
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-4 p-4 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)] rounded-lg">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--sage-green-400)] to-[var(--sage-green-600)] rounded-lg flex items-center justify-center text-white">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="font-bold text-foreground mb-1">Associate Clinical Social Worker (ASW)</h4>
-                <p className="text-sm text-foreground/70">Eligible & Anticipated Registration</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4 p-4 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)] rounded-lg">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--accent-rose)] to-[var(--accent-amber)] rounded-lg flex items-center justify-center text-white">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4 className="font-bold text-foreground mb-1">CPR/AED & First Aid</h4>
-                <p className="text-sm text-foreground/70">Adult and Pediatric Certified</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

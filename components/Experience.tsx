@@ -12,9 +12,9 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-[#0f1419]">
+    <section id="experience" className="py-16 bg-white dark:bg-[#0f1419]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Professional Experience
           </h2>
@@ -26,7 +26,7 @@ export default function Experience() {
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-[var(--border)]"></div>
 
           {/* Experience items */}
-          <div className="space-y-12">
+          <div className="space-y-8">
             {profileData.experiences.map((exp: ExperienceType, index: number) => (
               <div
                 key={exp.id}
@@ -39,10 +39,10 @@ export default function Experience() {
 
                 {/* Content */}
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
-                  <div className="bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start justify-between mb-3">
+                  <div className="bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)] p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-start justify-between mb-2">
                       <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : ''}`}>
-                        <h3 className="text-xl font-bold text-foreground mb-1">
+                        <h3 className="text-lg font-bold text-foreground mb-1">
                           {exp.title}
                         </h3>
                         <p className="text-[var(--primary)] font-semibold mb-1">

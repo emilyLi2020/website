@@ -1,38 +1,38 @@
 import { Profile } from '@/types';
 
 export const profileData: Profile = {
-  name: "Emily Li",
+  name: "Wenqing(Emily) Li",
   credentials: "MSW, ASW-Eligible",
-  tagline: "2nd Year UCB MSW Candidate | Mental Health Therapist | Bilingual (English & Mandarin)",
-  location: "Berkeley, California, United States",
+  tagline: "Mental Health Therapist | Bilingual (English & Mandarin)",
+  location: "California, United States",
   linkedin: "https://www.linkedin.com/in/emily-l-54b1b2259",
   
   about: {
-    intro: "I am a dedicated mental health professional currently completing my Master of Social Work at UC Berkeley with a 4.0 GPA. As a Mental Health Trainee at Kaiser Permanente, I provide trauma-informed, gender-inclusive therapy to diverse populations, managing a caseload of 8-10 clients weekly.",
+    intro: "I am a dedicated mental health professional currently completing my Master of Social Work at UC Berkeley. As a Mental Health Trainee at Kaiser Permanente, I provide trauma-informed, gender-inclusive therapy to diverse populations, managing a caseload of 8-10 clients weekly.",
     philosophy: "My approach integrates evidence-based practices with cultural sensitivity and lived experience. I believe in meeting clients where they are, building safety and trust, and empowering individuals to reclaim authorship over their narratives. With a background in neuroscience research and clinical practice, I bring both scientific rigor and deep compassion to my therapeutic work.",
     specializations: [
       "Trauma-Informed Care",
       "Gender-Inclusive Therapy",
       "Bilingual Counseling (English & Mandarin)",
-      "Immigrant & Refugee Mental Health",
-      "LGBTQ+ Affirming Care",
-      "OCD & Anxiety Disorders",
-      "Depression & Mood Disorders",
-      "Cross-Cultural Mental Health"
+      "Crisis Intervention",
+      "Depressive & Anxiety Disorders",
+      "Obsessive-Compulsive & Related Disorders",
+      "Trauma- & Stressor-Related Disorders",
+      "Insomnia Disorder"
     ],
-    languages: ["English (Fluent)", "Mandarin (Native)"]
+    languages: ["English", "Mandarin"]
   },
 
   experiences: [
     {
       id: "kaiser-trainee",
       title: "Mental Health Trainee",
-      organization: "Kaiser Permanente",
+      organization: "Kaiser Permanente Adult Psychiatry",
       location: "Daly City, California · Hybrid",
       period: "Sep 2025 - Present",
       type: "Internship",
       description: [
-        "Provide individual therapy 3 days/week, managing a weekly caseload of 8–10 clients with MDD, GAD, PTSD, adjustment disorders, grief, work stress, domestic violence, and LGBTQ+ related concerns",
+        "Provide individual therapy 3 days/week, managing a weekly caseload of 8–10 clients with MDD, GAD, PTSD, adjustment disorders, grief, work stress, and domestic violence",
         "Conduct assessments, diagnosis (DSM-5-TR), goal setting, treatment planning, and bilingual (English & Mandarin) intervention using a trauma-informed and gender-inclusive approach",
         "Implement evidence-based interventions, including Motivational Interviewing (MI), CBT, mindfulness-based techniques, art therapy, solution-focused therapy, and psychoeducation",
         "Co-facilitate Intensive Outpatient Groups for higher-level care patients, including psychoeducation and processing sessions, and engage in curriculum development",
@@ -42,24 +42,9 @@ export const profileData: Profile = {
       skills: ["Cross-team Collaboration", "Bilingual therapy: Mandarin", "Crisis Intervention", "DSM-5-TR Diagnosis"]
     },
     {
-      id: "ucb-financial-coach",
-      title: "Graduate Financial Wellness Coach",
-      organization: "University of California, Berkeley",
-      location: "Berkeley, California · Hybrid",
-      period: "Aug 2025 - Present",
-      type: "Part-time",
-      description: [
-        "Advocate for graduate students in access to financial resources on campus and education on financial literacies tailored to graduate students' needs",
-        "Initiated and facilitated focus groups to understand the needs of graduate students, developed a thorough report to inform future program developing",
-        "Provided internal trainings on Motivational Interview skills in Financial Wellness Coaching",
-        "Facilitated transition class on budgeting, student loans, savings, and investment"
-      ],
-      skills: ["Financial wellness coach", "Motivational Interviewing", "Program Development"]
-    },
-    {
       id: "ucb-counselor",
-      title: "Group Counselor & Instructor",
-      organization: "University of California, Berkeley",
+      title: "Group Counselor & Instructor (Neurodiversity-Inclusive, Ages 7–12)",
+      organization: "Blue Camp, UC Berkeley",
       location: "Berkeley, California · On-site",
       period: "Jun 2025 - Aug 2025",
       type: "Full-time",
@@ -103,22 +88,6 @@ export const profileData: Profile = {
       skills: ["Case Management", "Trauma Informed Care", "EMDR", "IFS", "Cultural Competency"]
     },
     {
-      id: "smhc-research",
-      title: "Research Assistant",
-      organization: "Shanghai Mental Health Center",
-      location: "Shanghai · Hybrid",
-      period: "Jan 2023 - Aug 2024",
-      type: "Part-time",
-      description: [
-        "Contributed to two projects applying neuroimaging methods to identify predictive biomarkers of treatment outcomes for OCD patients",
-        "Applied structural MRI to predict the efficacy of MBCT and psychoeducation for OCD patients, and developed a prediction model based on identified biomarkers (published)",
-        "Using resting-state fMRI to identify treatment-specific biomarkers that differentially predict response to group CBT versus medication among OCD patients (ongoing, co-led)",
-        "Developed skills in data visualization using R, data analysis using SPSS, building statistic models using MATLAB/R/SPSS, and MRI data analysis",
-        "Conducted comprehensive literature reviews on OCD, focusing on abnormalities in brain structure and function, and treatment-related changes"
-      ],
-      skills: ["Research Skills", "Neuroimaging", "Statistical Analysis", "Data Visualization"]
-    },
-    {
       id: "smhc-intern",
       title: "Mental Health Intern",
       organization: "Shanghai Mental Health Center",
@@ -133,6 +102,22 @@ export const profileData: Profile = {
         "Advocated for underrepresented populations by connecting them with resources and community networks for support beyond medical care"
       ],
       skills: ["Cross-functional Collaborations", "Group CBT", "Clinical Assessment"]
+    },
+    {
+      id: "fuwafuwa-family",
+      title: "Founder & Project Lead",
+      organization: "Fuwafuwa Family Psychoeducation Project",
+      location: "Shanghai, China · Hybrid",
+      period: "Sep 2021 - Apr 2024",
+      type: "Self-employed",
+      description: [
+        "Produced and disseminated psychoeducational videos in elementary and middle schools on emotion awareness, expression, regulation, and interpersonal conflicts, received 210,000+ views",
+        "Delivered family psychoeducation lectures to improve parents' awareness of mental health and providing guidance on effective and supportive communication with their children",
+        "Built and managed a cross-disciplinary team, fostered a creative & inclusive working culture",
+        "Reached out and established partnerships with academic organizations and corporations to promote service quality and social impact",
+        "This project is acknowledged by Shanghai Psychological Association and China's Ministry of Education, and received National Innovation Fund in 2022"
+      ],
+      skills: ["Social Media Marketing", "Project Management", "Public Outreach", "Family Psychoeducation", "Cross-disciplinary Team Building"]
     }
   ],
 
@@ -145,8 +130,8 @@ export const profileData: Profile = {
       location: "Berkeley, California",
       period: "Aug 2024 - May 2026",
       gpa: "4.0/4.0",
-      honors: ["Associate Clinical Social Worker (ASW) — Eligible & Anticipated registration before onboarding"],
-      courses: "Individual and group therapy, Psychosocial assessment, Trauma-informed care, Clinical diagnosis"
+      activities: "Founder & Group Facilitator of Mental Health Wellness Group for International students",
+      courses: "Psychosocial Problems and Psychopathology, Substance Use and Interventions, Cognitive Behavioral Methods, Anti-Oppressive Frameworks for Social Work Ethics and Justice, Aging Processes, Solution-Focused Brief Therapy, Domestic Violence, Third Wave Cognitive Behavioral Therapy"
     },
     {
       id: "ecnu-bs",
@@ -155,7 +140,7 @@ export const profileData: Profile = {
       institution: "East China Normal University",
       location: "Shanghai, China",
       period: "Sep 2020 - Jun 2024",
-      gpa: "3.8/4.0, Ranking: Top 10%",
+      gpa: "3.8/4.0 | Top 10%",
       honors: [
         "Outstanding Graduates",
         "Supreme Scholarship for 2022 & 2021",
@@ -170,7 +155,7 @@ export const profileData: Profile = {
     {
       id: "pallidum-ocd",
       title: "Pallidum volume as a predictor for the effectiveness of mindfulness-based cognitive therapy and psycho-education in unmedicated patients with obsessive-compulsive disorder",
-      authors: "Chen Zhang, Xiaochen Zhang, Wenqing Li, Tianran Zhang, Zongfeng Zhang, Lu Lu, Fabrizio Didonna, Qing Fan",
+      authors: "Chen Zhang*, Xiaochen Zhang*, Wenqing Li*, Tianran Zhang, Zongfeng Zhang, Lu Lu, Fabrizio Didonna, Qing Fan",
       journal: "Comprehensive Psychiatry, 131, 152462",
       year: 2024,
       presented: "21st National Psychiatry Conference of the Chinese Medical Association, 17th National Congress of Child and Adolescent Psychiatry, Suzhou, China, September 2023",
@@ -178,8 +163,8 @@ export const profileData: Profile = {
     },
     {
       id: "fmri-ocd",
-      title: "Using resting-state fMRI to identify treatment-specific biomarkers that differentially predict response to group CBT versus medication among OCD patients",
-      authors: "Wenqing Li (Co-lead), Research Team",
+      title: "Resting-state functional connectivity predicts response to medication and psychotherapy in obsessive–compulsive disorder",
+      authors: "Wenqing Li*, Chen Zhang*, Research Team",
       journal: "Ongoing Research Project",
       year: 2024,
       type: "ongoing"
@@ -190,9 +175,9 @@ export const profileData: Profile = {
     {
       id: "individual-therapy",
       title: "Individual Therapy",
-      description: "Trauma-informed, gender-inclusive individual therapy for adults addressing depression, anxiety, PTSD, grief, and life transitions.",
+      description: "Trauma-informed, gender-inclusive individual therapy for youth, adults, and older adults addressing depression, anxiety, PTSD, grief, and life transitions.",
       icon: "person",
-      modalities: ["Motivational Interviewing", "CBT", "IFS", "EMDR", "Mindfulness"]
+      modalities: ["Motivational Interviewing", "CBT", "DBT", "IFS", "Mindfulness"]
     },
     {
       id: "group-therapy",
@@ -213,7 +198,21 @@ export const profileData: Profile = {
       title: "Trauma-Informed Care",
       description: "Specialized support for individuals with complex trauma, including refugees, domestic violence survivors, and PTSD.",
       icon: "heart",
-      modalities: ["EMDR", "Safety Planning", "Grounding Techniques", "Somatic Approaches"]
+      modalities: ["Safety Planning", "Grounding Techniques", "Somatic Approaches", "Trauma Processing"]
+    },
+    {
+      id: "case-management",
+      title: "Case Management",
+      description: "Comprehensive support to connect clients with community resources, coordinate care, and advocate for access to essential services including healthcare, housing, and social support systems.",
+      icon: "clipboard",
+      modalities: ["Resource Coordination", "Care Planning", "Systems Navigation", "Advocacy"]
+    },
+    {
+      id: "crisis-intervention",
+      title: "Crisis Intervention",
+      description: "Immediate support for mental health crises including suicidal ideation, homicidal ideation, and acute psychiatric emergencies. Safety assessment, planning, and connection to appropriate level of care.",
+      icon: "alert",
+      modalities: ["Risk Assessment", "Safety Planning", "Crisis Stabilization", "Emergency Coordination"]
     }
   ],
 
@@ -223,11 +222,12 @@ export const profileData: Profile = {
       items: [
         "Motivational Interviewing (MI)",
         "Cognitive Behavioral Therapy (CBT)",
+        "Dialectical Behavior Therapy (DBT)",
         "Internal Family Systems (IFS)",
-        "Eye Movement Desensitization and Reprocessing (EMDR)",
         "Mindfulness-Based Approaches",
         "Art Therapy",
         "Solution-Focused Therapy",
+        "Exposure Therapy",
         "Exposure and Response Prevention (ERP)"
       ]
     },
@@ -248,12 +248,8 @@ export const profileData: Profile = {
       category: "Specialized Populations",
       items: [
         "Refugees & Immigrants",
-        "LGBTQ+ Community",
         "International Students",
-        "Trauma Survivors",
-        "OCD & Anxiety Disorders",
-        "Adolescents & Youth",
-        "Underserved Communities"
+        "Trauma Survivors"
       ]
     },
     {

@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+There is a docs folder that contains the documentation for this project. Always refer to the folder when confused about how the project is laid out or features. 
+
+When adding new page or new functionality, make sure to add on to the existing documentationl

@@ -17,17 +17,22 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#services', label: 'Services' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#education', label: 'Education' },
-    { href: '#publications', label: 'Research' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#about', label: 'About', isHash: true },
+    { href: '/#services', label: 'Services', isHash: true },
+    { href: '/experience', label: 'Experience & Education', isHash: false },
+    { href: '/research', label: 'Research', isHash: false },
+    { href: '/#contact', label: 'Contact', isHash: true },
   ];
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isHash: boolean) => {
+    if (!isHash) {
+      setIsMobileMenuOpen(false);
+      return; // Let Next.js handle the navigation
+    }
+    
     e.preventDefault();
-    const element = document.querySelector(href);
+    const hash = href.split('#')[1];
+    const element = document.querySelector(`#${hash}`);
     if (element) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
@@ -38,6 +43,9 @@ export default function Navigation() {
         behavior: 'smooth'
       });
       setIsMobileMenuOpen(false);
+    } else if (href.startsWith('/')) {
+      // If we're not on the home page, navigate there first
+      window.location.href = href;
     }
   };
 
@@ -53,24 +61,23 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
-            href="#hero"
-            onClick={(e) => scrollToSection(e, '#hero')}
+            href="/"
             className="text-xl font-semibold text-foreground hover:text-[var(--primary)] transition-colors"
           >
-            Emily Li, MSW
+            Wenqing(Emily) Li, MSW, ASW-Eligible
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                onClick={(e) => scrollToSection(e, link.href, link.isHash)}
                 className="text-sm font-medium text-foreground/70 hover:text-[var(--primary)] transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -104,14 +111,14 @@ export default function Navigation() {
         <div className="md:hidden bg-white dark:bg-[#0f1419] border-t border-[var(--border)]">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                onClick={(e) => scrollToSection(e, link.href, link.isHash)}
                 className="block py-2 text-base font-medium text-foreground/70 hover:text-[var(--primary)] transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

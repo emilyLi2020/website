@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Emily Li, MSW | Mental Health Therapist | Bilingual Counseling",
-  description: "Emily Li is a mental health therapist and UC Berkeley MSW candidate providing trauma-informed, gender-inclusive therapy in English and Mandarin. Specializing in individual and group therapy for diverse populations.",
-  keywords: ["mental health therapist", "bilingual counseling", "trauma-informed care", "Mandarin therapist", "Bay Area therapist", "LGBTQ+ affirming", "immigrant mental health"],
-  authors: [{ name: "Emily Li" }],
+  title: "Wenqing(Emily) Li, MSW | Mental Health Therapist | Bilingual Counseling",
+  description: "Wenqing(Emily) Li is a mental health therapist and UC Berkeley MSW candidate providing trauma-informed, gender-inclusive therapy in English and Mandarin. Specializing in individual and group therapy for diverse populations.",
+  keywords: ["mental health therapist", "bilingual counseling", "trauma-informed care", "Mandarin therapist", "Bay Area therapist", "immigrant mental health"],
+  authors: [{ name: "Wenqing(Emily) Li" }],
   openGraph: {
-    title: "Emily Li, MSW | Mental Health Therapist",
+    title: "Wenqing(Emily) Li, MSW | Mental Health Therapist",
     description: "Trauma-informed, gender-inclusive therapy in English and Mandarin",
     type: "website",
     locale: "en_US",

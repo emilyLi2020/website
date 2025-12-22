@@ -51,16 +51,32 @@ export default function Contact() {
 
     setIsSubmitting(true);
     
-    // Simulate form submission (replace with actual API call in production)
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset success message after 5 seconds
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
       setTimeout(() => setSubmitStatus('idle'), 5000);
-    }, 1000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -73,7 +89,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
+    <section id="contact" className="py-16 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -81,7 +97,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-[var(--primary)] mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Interested in working together or have questions? I'd love to hear from you.
+            Interested in working together or have questions? I'd love to connect.
           </p>
         </div>
 
@@ -135,8 +151,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Availability</h4>
-                    <p className="text-foreground/70">Currently accepting new clients</p>
-                    <p className="text-sm text-foreground/60 mt-1">ASW-Eligible, anticipated registration before onboarding</p>
+                    <p className="text-foreground/70">Open to work</p>
                   </div>
                 </div>
               </div>
@@ -170,17 +185,37 @@ export default function Contact() {
                   </svg>
                   Trauma-Informed Care
                 </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Case Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Crisis Intervention
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white dark:bg-[#0f1419] p-8 rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-2">Send a Message</h3>
+            <p className="text-sm text-foreground/60 italic mb-6">(currently not available, welcome to connect via LinkedIn)</p>
+            <p className="text-foreground/60 text-sm mb-6">(currently not available, welcome to connect via linkedin)</p>
             
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-[var(--sage-green-100)] dark:bg-[var(--sage-green-100)] text-[var(--sage-green-700)] dark:text-[var(--sage-green-700)] rounded-lg">
                 Thank you for your message! I'll get back to you soon.
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
+                Sorry, there was an error sending your message. Please try again or email me directly.
               </div>
             )}
 
