@@ -133,7 +133,7 @@ export default function Publications() {
                 <div>
                   <h4 className="text-lg font-bold text-foreground mb-2">Patient-Centered Approach</h4>
                   <p className="text-sm text-foreground/70">
-                    Examining treatment effectiveness from clients' perspectives, focusing on quality of life, functional improvement, and subjective well-being beyond symptom reduction
+                    Examining treatment effectiveness from clients&apos; perspectives, focusing on quality of life, functional improvement, and subjective well-being beyond symptom reduction
                   </p>
                 </div>
               </div>

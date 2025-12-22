@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { profileData } from '@/data/profile';
 
 export default function Footer() {
@@ -22,29 +23,29 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/#about" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/#about" className="text-white/70 hover:text-white transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#services" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/#services" className="text-white/70 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/experience" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/experience" className="text-white/70 hover:text-white transition-colors">
                   Experience & Education
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/research" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/research" className="text-white/70 hover:text-white transition-colors">
                   Research
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/#contact" className="text-white/70 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

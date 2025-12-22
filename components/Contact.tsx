@@ -97,7 +97,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-[var(--primary)] mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Interested in working together or have questions? I'd love to connect.
+            Interested in working together or have questions? I&apos;d love to connect.
           </p>
         </div>
 
@@ -205,11 +205,9 @@ export default function Contact() {
           <div className="bg-white dark:bg-[#0f1419] p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-bold text-foreground mb-2">Send a Message</h3>
             <p className="text-sm text-foreground/60 italic mb-6">(currently not available, welcome to connect via LinkedIn)</p>
-            <p className="text-foreground/60 text-sm mb-6">(currently not available, welcome to connect via linkedin)</p>
-            
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-[var(--sage-green-100)] dark:bg-[var(--sage-green-100)] text-[var(--sage-green-700)] dark:text-[var(--sage-green-700)] rounded-lg">
-                Thank you for your message! I'll get back to you soon.
+                Thank you for your message! I&apos;ll get back to you soon.
               </div>
             )}
 

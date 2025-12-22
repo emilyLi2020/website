@@ -32,7 +32,7 @@ export default function BlogPage() {
           </div>
           <h2 className="text-3xl font-bold text-foreground mb-4">Coming Soon</h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto mb-8">
-            I'm currently working on creating thoughtful content about mental health, therapy approaches, and cultural considerations in clinical practice. Check back soon for updates!
+            I&apos;m currently working on creating thoughtful content about mental health, therapy approaches, and cultural considerations in clinical practice. Check back soon for updates!
           </p>
 
           {/* Potential Topics */}

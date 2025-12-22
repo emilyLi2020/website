@@ -1,7 +1,6 @@
 'use client';
 
 import { profileData } from '@/data/profile';
-import DarkModeToggle from './DarkModeToggle';
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -21,13 +20,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--soft-teal-50)] via-[var(--calm-blue-50)] to-[var(--sage-green-50)] dark:from-[var(--soft-teal-50)] dark:via-[#0f1419] dark:to-[var(--sage-green-50)]"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--soft-teal-50)] via-[var(--calm-blue-50)] to-[var(--sage-green-50)]"
     >
-      {/* Dark mode toggle - fixed position */}
-      <div className="fixed top-6 right-6 z-50">
-        <DarkModeToggle />
-      </div>
-
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Profile Image Placeholder */}
         <div className="mb-8 flex justify-center">
@@ -51,13 +45,13 @@ export default function Hero() {
 
         {/* Key Highlights */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="px-4 py-2 bg-white/80 dark:bg-[var(--warm-neutral-200)] rounded-full text-sm font-medium text-foreground shadow-sm">
+          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
             Kaiser Permanente Mental Health Trainee
           </div>
-          <div className="px-4 py-2 bg-white/80 dark:bg-[var(--warm-neutral-200)] rounded-full text-sm font-medium text-foreground shadow-sm">
+          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
             UC Berkeley MSW
           </div>
-          <div className="px-4 py-2 bg-white/80 dark:bg-[var(--warm-neutral-200)] rounded-full text-sm font-medium text-foreground shadow-sm">
+          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
             Published Researcher
           </div>
         </div>
@@ -72,7 +66,7 @@ export default function Hero() {
           </button>
           <button
             onClick={() => scrollToSection('#contact')}
-            className="px-8 py-4 bg-white dark:bg-[var(--warm-neutral-200)] hover:bg-[var(--muted)] text-foreground rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-4 bg-white hover:bg-[var(--muted)] text-foreground rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Contact Me
           </button>

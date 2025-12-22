@@ -79,7 +79,7 @@ export default function About() {
         <div className="mt-16 p-8 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[var(--soft-teal-50)] dark:to-[var(--calm-blue-50)] rounded-2xl border border-[var(--border)]">
           <blockquote className="text-center">
             <p className="text-xl md:text-2xl font-medium text-foreground italic mb-4">
-              "What looks like 'choice' is often the residue of childhood harm and survival-based neural patterns. Trauma-informed care invites us to look beyond symptoms and help people rebuild safety, connection, and meaning."
+              &quot;What looks like &apos;choice&apos; is often the residue of childhood harm and survival-based neural patterns. Trauma-informed care invites us to look beyond symptoms and help people rebuild safety, connection, and meaning.&quot;
             </p>
             <cite className="text-foreground/70 font-semibold">— Wenqing(Emily) Li</cite>
           </blockquote>
