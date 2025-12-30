@@ -2,10 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import DarkModeToggle from '@/components/DarkModeToggle';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +36,7 @@ export default function Navigation() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isHash: boolean) => {
     if (!isHash) {
-      setIsMobileMenuOpen(false);
+      setIsOpen(false);
       return; // Let Next.js handle the navigation
     }
     
@@ -42,7 +52,7 @@ export default function Navigation() {
         top: offsetPosition,
         behavior: 'smooth'
       });
-      setIsMobileMenuOpen(false);
+      setIsOpen(false);
     } else if (href.startsWith('/')) {
       // If we're not on the home page, navigate there first
       window.location.href = href;
@@ -79,51 +89,39 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
+            <DarkModeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-[var(--muted)] transition-colors"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile Dark Mode Toggle and Menu */}
+          <div className="flex items-center gap-2 md:hidden">
+            <DarkModeToggle />
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Toggle menu">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[350px]">
+              <SheetHeader>
+                <SheetTitle className="text-left text-foreground">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col space-y-4 mt-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href, link.isHash)}
+                    className="text-lg font-medium text-foreground/70 hover:text-[var(--primary)] transition-colors py-2"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+          </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-[#0f1419] border-t border-[var(--border)]">
-          <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href, link.isHash)}
-                className="block py-2 text-base font-medium text-foreground/70 hover:text-[var(--primary)] transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </nav>
   );
 }
-

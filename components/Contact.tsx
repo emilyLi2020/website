@@ -2,6 +2,13 @@
 
 import { useState } from 'react';
 import { profileData } from '@/data/profile';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { MapPin, Linkedin, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -104,17 +111,15 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white dark:bg-[#0f1419] p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
+            <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-foreground">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
                 {/* Location */}
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] rounded-lg flex items-center justify-center text-white">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
+                    <MapPin className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Location</h4>
@@ -125,9 +130,7 @@ export default function Contact() {
                 {/* LinkedIn */}
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] rounded-lg flex items-center justify-center text-white">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
+                    <Linkedin className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">LinkedIn</h4>
@@ -145,168 +148,158 @@ export default function Contact() {
                 {/* Availability */}
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] rounded-lg flex items-center justify-center text-white">
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                    <Calendar className="w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Availability</h4>
                     <p className="text-foreground/70">Open to work</p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
 
             {/* Additional Info */}
-            <div className="bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[var(--soft-teal-50)] dark:to-[var(--calm-blue-50)] p-8 rounded-2xl">
-              <h4 className="font-bold text-foreground mb-4">Services Offered</h4>
-              <ul className="space-y-2 text-foreground/70">
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Individual Therapy
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Group Therapy
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Bilingual Counseling (English & Mandarin)
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Trauma-Informed Care
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Case Management
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[var(--primary)]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Crisis Intervention
-                </li>
-              </ul>
-            </div>
+            <Card className="border-0 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[#0f766e]/20 dark:to-[#1d4ed8]/20">
+              <CardContent className="p-8">
+                <h4 className="font-bold text-foreground mb-4">Services Offered</h4>
+                <ul className="space-y-2 text-foreground/70">
+                  {[
+                    'Individual Therapy',
+                    'Group Therapy',
+                    'Bilingual Counseling (English & Mandarin)',
+                    'Trauma-Informed Care',
+                    'Case Management',
+                    'Crisis Intervention',
+                  ].map((service, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-[var(--primary)]" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-[#0f1419] p-8 rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-2">Send a Message</h3>
-            <p className="text-sm text-foreground/60 italic mb-6">(currently not available, welcome to connect via LinkedIn)</p>
-            {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-[var(--sage-green-100)] dark:bg-[var(--sage-green-100)] text-[var(--sage-green-700)] dark:text-[var(--sage-green-700)] rounded-lg">
-                Thank you for your message! I&apos;ll get back to you soon.
-              </div>
-            )}
+          <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-foreground">Send a Message</CardTitle>
+              <CardDescription className="text-sm text-foreground/60 italic">
+                (currently not available, welcome to connect via{' '}
+                <a
+                  href={profileData.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--primary)] hover:text-[var(--primary-hover)] underline not-italic"
+                >
+                  LinkedIn
+                </a>
+                )
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {submitStatus === 'success' && (
+                <Alert className="mb-6 bg-[var(--sage-green-100)] border-[var(--sage-green-200)] text-[var(--sage-green-700)]">
+                  <CheckCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    Thank you for your message! I&apos;ll get back to you soon.
+                  </AlertDescription>
+                </Alert>
+              )}
 
-            {submitStatus === 'error' && (
-              <div className="mb-6 p-4 bg-red-100 text-red-700 rounded-lg">
-                Sorry, there was an error sending your message. Please try again or email me directly.
-              </div>
-            )}
+              {submitStatus === 'error' && (
+                <Alert variant="destructive" className="mb-6">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    Sorry, there was an error sending your message. Please try again or email me directly.
+                  </AlertDescription>
+                </Alert>
+              )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
-                  Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.name ? 'border-red-500' : 'border-[var(--border)]'
-                  } bg-white dark:bg-[var(--warm-neutral-200)] text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-colors`}
-                  placeholder="Your name"
-                />
-                {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
-              </div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-foreground font-semibold">
+                    Name *
+                  </Label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    className={`h-12 ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                  />
+                  {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+                </div>
 
-              {/* Email */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.email ? 'border-red-500' : 'border-[var(--border)]'
-                  } bg-white dark:bg-[var(--warm-neutral-200)] text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-colors`}
-                  placeholder="your.email@example.com"
-                />
-                {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
-              </div>
+                {/* Email */}
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-foreground font-semibold">
+                    Email *
+                  </Label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your.email@example.com"
+                    className={`h-12 ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                  />
+                  {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+                </div>
 
-              {/* Subject */}
-              <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-foreground mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.subject ? 'border-red-500' : 'border-[var(--border)]'
-                  } bg-white dark:bg-[var(--warm-neutral-200)] text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-colors`}
-                  placeholder="What is this regarding?"
-                />
-                {errors.subject && <p className="mt-1 text-sm text-red-500">{errors.subject}</p>}
-              </div>
+                {/* Subject */}
+                <div className="space-y-2">
+                  <Label htmlFor="subject" className="text-foreground font-semibold">
+                    Subject *
+                  </Label>
+                  <Input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="What is this regarding?"
+                    className={`h-12 ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                  />
+                  {errors.subject && <p className="text-sm text-red-500">{errors.subject}</p>}
+                </div>
 
-              {/* Message */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.message ? 'border-red-500' : 'border-[var(--border)]'
-                  } bg-white dark:bg-[var(--warm-neutral-200)] text-foreground focus:outline-none focus:ring-2 focus:ring-[var(--primary)] transition-colors resize-none`}
-                  placeholder="Your message..."
-                />
-                {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
-              </div>
+                {/* Message */}
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-foreground font-semibold">
+                    Message *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    placeholder="Your message..."
+                    className={`resize-none ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                  />
+                  {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
+                </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
-          </div>
+                {/* Submit Button */}
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  size="lg"
+                  className="w-full py-6 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
   );
 }
-

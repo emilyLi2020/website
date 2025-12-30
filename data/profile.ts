@@ -155,7 +155,7 @@ export const profileData: Profile = {
     {
       id: "pallidum-ocd",
       title: "Pallidum volume as a predictor for the effectiveness of mindfulness-based cognitive therapy and psycho-education in unmedicated patients with obsessive-compulsive disorder",
-      authors: "Chen Zhang*, Xiaochen Zhang*, Wenqing Li*, Tianran Zhang, Zongfeng Zhang, Lu Lu, Fabrizio Didonna, Qing Fan",
+      authors: "Chen Zhang¹, Xiaochen Zhang¹, Wenqing Li¹, Tianran Zhang, Zongfeng Zhang, Lu Lu, Fabrizio Didonna, Qing Fan*",
       journal: "Comprehensive Psychiatry, 131, 152462",
       year: 2024,
       presented: "21st National Psychiatry Conference of the Chinese Medical Association, 17th National Congress of Child and Adolescent Psychiatry, Suzhou, China, September 2023",
@@ -164,7 +164,7 @@ export const profileData: Profile = {
     {
       id: "fmri-ocd",
       title: "Resting-state functional connectivity predicts response to medication and psychotherapy in obsessive–compulsive disorder",
-      authors: "Wenqing Li*, Chen Zhang*, Research Team",
+      authors: "Wenqing Li¹, Chen Zhang¹, Research Team",
       journal: "Ongoing Research Project",
       year: 2024,
       type: "ongoing"
@@ -187,20 +187,6 @@ export const profileData: Profile = {
       modalities: ["Art Therapy", "Process Groups", "Psychoeducation", "Intensive Outpatient Programs"]
     },
     {
-      id: "bilingual-counseling",
-      title: "Bilingual Counseling",
-      description: "Culturally sensitive therapy services provided in both English and Mandarin, specializing in immigrant and international student experiences.",
-      icon: "language",
-      modalities: ["Cross-Cultural Therapy", "Immigrant Mental Health", "Cultural Adaptation"]
-    },
-    {
-      id: "trauma-care",
-      title: "Trauma-Informed Care",
-      description: "Specialized support for individuals with complex trauma, including refugees, domestic violence survivors, and PTSD.",
-      icon: "heart",
-      modalities: ["Safety Planning", "Grounding Techniques", "Somatic Approaches", "Trauma Processing"]
-    },
-    {
       id: "case-management",
       title: "Case Management",
       description: "Comprehensive support to connect clients with community resources, coordinate care, and advocate for access to essential services including healthcare, housing, and social support systems.",
@@ -213,6 +199,20 @@ export const profileData: Profile = {
       description: "Immediate support for mental health crises including suicidal ideation, homicidal ideation, and acute psychiatric emergencies. Safety assessment, planning, and connection to appropriate level of care.",
       icon: "alert",
       modalities: ["Risk Assessment", "Safety Planning", "Crisis Stabilization", "Emergency Coordination"]
+    },
+    {
+      id: "bilingual-counseling",
+      title: "Bilingual Counseling",
+      description: "Culturally sensitive therapy services provided in both English and Mandarin, specializing in immigrant and international student experiences.",
+      icon: "language",
+      modalities: ["Cross-Cultural Therapy", "Immigrant Mental Health", "Cultural Adaptation"]
+    },
+    {
+      id: "trauma-care",
+      title: "Trauma-Informed Care",
+      description: "Specialized support for individuals with complex trauma, including refugees, domestic violence survivors, and PTSD.",
+      icon: "heart",
+      modalities: ["Safety Planning", "Grounding Techniques", "Somatic Approaches", "Trauma Processing"]
     }
   ],
 

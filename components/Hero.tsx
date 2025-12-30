@@ -1,6 +1,10 @@
 'use client';
 
 import { profileData } from '@/data/profile';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ArrowDown } from 'lucide-react';
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -23,11 +27,13 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--soft-teal-50)] via-[var(--calm-blue-50)] to-[var(--sage-green-50)]"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        {/* Profile Image Placeholder */}
+        {/* Profile Avatar */}
         <div className="mb-8 flex justify-center">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] flex items-center justify-center text-white text-4xl font-bold shadow-xl">
-            WL
-          </div>
+          <Avatar className="w-32 h-32 bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] shadow-xl">
+            <AvatarFallback className="bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] text-white text-4xl font-bold">
+              WL
+            </AvatarFallback>
+          </Avatar>
         </div>
 
         {/* Name and Credentials */}
@@ -43,51 +49,43 @@ export default function Hero() {
           {profileData.tagline}
         </p>
 
-        {/* Key Highlights */}
+        {/* Key Highlights - Badges */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
+          <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-white/80 dark:bg-white/20 text-foreground dark:text-white border-0 shadow-sm">
             Kaiser Permanente Mental Health Trainee
-          </div>
-          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
+          </Badge>
+          <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-white/80 dark:bg-white/20 text-foreground dark:text-white border-0 shadow-sm">
             UC Berkeley MSW
-          </div>
-          <div className="px-4 py-2 bg-white/80 rounded-full text-sm font-medium text-foreground shadow-sm">
+          </Badge>
+          <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-white/80 dark:bg-white/20 text-foreground dark:text-white border-0 shadow-sm">
             Published Researcher
-          </div>
+          </Badge>
         </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
+          <Button
             onClick={() => scrollToSection('#services')}
-            className="px-8 py-4 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            size="lg"
+            className="px-8 py-6 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             View Services
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => scrollToSection('#contact')}
-            className="px-8 py-4 bg-white hover:bg-[var(--muted)] text-foreground rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            variant="secondary"
+            size="lg"
+            className="px-8 py-6 bg-white dark:bg-white/20 hover:bg-[var(--muted)] dark:hover:bg-white/30 text-foreground dark:text-white rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Contact Me
-          </button>
+          </Button>
         </div>
 
         {/* Scroll Indicator */}
         <div className="mt-16 animate-bounce">
-          <svg
-            className="w-6 h-6 mx-auto text-foreground/50"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
+          <ArrowDown className="w-6 h-6 mx-auto text-foreground/50" />
         </div>
       </div>
     </section>
   );
 }
-
