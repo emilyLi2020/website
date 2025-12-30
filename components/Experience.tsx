@@ -103,7 +103,7 @@ export default function Experience() {
                                   <Badge
                                     key={i}
                                     variant="outline"
-                                    className="bg-white dark:bg-white text-foreground border-0"
+                                    className="bg-white dark:bg-card text-foreground border-0"
                                   >
                                     {skill}
                                   </Badge>

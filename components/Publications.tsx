@@ -95,7 +95,7 @@ export default function Publications() {
           </CardHeader>
           <CardContent className="p-6 md:p-10 pt-6">
             <div className="grid md:grid-cols-2 gap-5">
-              <Card className="border-0 bg-white dark:bg-white shadow-md">
+              <Card className="border-0 bg-white dark:bg-card shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -108,7 +108,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-white shadow-md">
+              <Card className="border-0 bg-white dark:bg-card shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <FlaskConical className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -121,7 +121,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-white shadow-md">
+              <Card className="border-0 bg-white dark:bg-card shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <Users className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -134,7 +134,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-white shadow-md">
+              <Card className="border-0 bg-white dark:bg-card shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <UserCircle className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
