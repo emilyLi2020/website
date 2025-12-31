@@ -23,7 +23,7 @@ export default function Education() {
               className="border-0 bg-white dark:bg-[#0f1419] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               {/* Header with gradient */}
-              <CardHeader className="bg-gradient-to-r from-[var(--soft-teal-500)] to-[var(--calm-blue-500)] p-5 text-white">
+              <CardHeader className="bg-gradient-to-br from-[var(--soft-teal-600)] to-[var(--soft-teal-100)] p-5 text-white">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-1">{edu.degree}</h3>

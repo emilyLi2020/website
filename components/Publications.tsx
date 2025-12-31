@@ -87,15 +87,15 @@ export default function Publications() {
         </div>
 
         {/* Research Focus Areas */}
-        <Card className="mt-12 border-0 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[var(--soft-teal-50)] dark:to-[var(--calm-blue-50)]">
-          <CardHeader className="p-6 md:p-10 pb-0">
-            <CardTitle className="text-2xl font-bold text-foreground text-center">
+        <Card className="mt-12 border-0 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:bg-[#1a1f26] dark:from-transparent dark:to-transparent">
+          <CardHeader className="px-6 pt-6 md:px-10 md:pt-10 pb-0">
+            <CardTitle className="text-3xl font-bold text-foreground text-center">
               Research Focus Areas
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-6 md:p-10 pt-6">
+          <CardContent className="px-6 pb-6 md:px-10 md:pb-10 pt-8">
             <div className="grid md:grid-cols-2 gap-5">
-              <Card className="border-0 bg-white dark:bg-card shadow-md">
+              <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -108,7 +108,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-card shadow-md">
+              <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <FlaskConical className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -121,7 +121,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-card shadow-md">
+              <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <Users className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />
@@ -134,7 +134,7 @@ export default function Publications() {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="border-0 bg-white dark:bg-card shadow-md">
+              <Card className="border-0 bg-white dark:bg-[#0f1419] shadow-md">
                 <CardContent className="p-5">
                   <div className="flex items-start gap-4">
                     <UserCircle className="w-8 h-8 text-[var(--primary)] flex-shrink-0" />

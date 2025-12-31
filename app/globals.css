@@ -152,13 +152,13 @@
 --sidebar-ring: oklch(0.556 0 0);
 
 /* Dark mode therapeutic palette overrides */
---soft-teal-50: oklch(0.22 0.02 220);
---soft-teal-100: oklch(0.28 0.04 220);
---calm-blue-50: oklch(0.22 0.02 210);
---calm-blue-100: oklch(0.28 0.04 210);
---sage-green-50: oklch(0.22 0.02 155);
---sage-green-100: oklch(0.28 0.04 155);
---warm-neutral-200: oklch(0.28 0.01 220);
+--soft-teal-50: oklch(0.18 0.02 220);
+--soft-teal-100: oklch(0.24 0.03 220);
+--calm-blue-50: oklch(0.18 0.02 220);
+--calm-blue-100: oklch(0.24 0.03 220);
+--sage-green-50: oklch(0.18 0.01 220);
+--sage-green-100: oklch(0.24 0.02 220);
+--warm-neutral-200: oklch(0.24 0.01 220);
 }
 
 @layer base {

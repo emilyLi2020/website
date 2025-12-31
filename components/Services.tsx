@@ -14,6 +14,15 @@ const iconMap: { [key: string]: JSX.Element } = {
   alert: <AlertTriangle className="w-8 h-8" />,
 };
 
+const iconGradientMap: { [key: string]: string } = {
+  person: 'from-[var(--soft-teal-400)] to-[var(--calm-blue-400)]',
+  people: 'from-[var(--soft-teal-400)] to-[var(--calm-blue-400)]',
+  language: 'from-[var(--accent-rose)] via-[var(--accent-rose)] via-[85%] to-[var(--accent-amber)]', // Mostly pink
+  heart: 'from-[var(--accent-rose)] via-[var(--accent-rose)] via-[85%] to-[var(--accent-amber)]', // Mostly pink
+  clipboard: 'from-[var(--accent-rose)] to-[var(--accent-amber)]', // Same as CPR/AED
+  alert: 'from-[var(--accent-rose)] to-[var(--accent-amber)]', // Same as CPR/AED
+};
+
 export default function Services() {
   return (
     <section id="services" className="py-16 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
@@ -36,7 +45,7 @@ export default function Services() {
               className="border-0 bg-white dark:bg-[#0f1419] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <CardHeader className="flex flex-row items-start gap-4 p-8 pb-4">
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[var(--soft-teal-400)] to-[var(--calm-blue-400)] rounded-xl flex items-center justify-center text-white">
+                <div className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${iconGradientMap[service.icon] || 'from-[var(--soft-teal-400)] to-[var(--calm-blue-400)]'} rounded-xl flex items-center justify-center text-white`}>
                   {iconMap[service.icon]}
                 </div>
                 <div className="flex-1">
@@ -74,7 +83,7 @@ export default function Services() {
               Therapeutic Modalities
             </CardTitle>
           </CardHeader>
-          <CardContent className="p-8 md:p-12 pt-8">
+          <CardContent className="px-8 pb-8 md:px-12 md:pb-12 pt-4">
             <div className="grid md:grid-cols-3 gap-6">
               {profileData.skills
                 .find((category) => category.category === 'Therapeutic Modalities')

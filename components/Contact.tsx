@@ -96,7 +96,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-[var(--muted)] dark:bg-[var(--warm-neutral-200)]">
+    <section id="contact" className="py-16 bg-[var(--muted)] dark:bg-[#121820]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -159,7 +159,7 @@ export default function Contact() {
             </Card>
 
             {/* Additional Info */}
-            <Card className="border-0 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[#0f766e]/20 dark:to-[#1d4ed8]/20">
+            <Card className="border-0 bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[var(--soft-teal-50)] dark:to-[var(--soft-teal-100)]">
               <CardContent className="p-8">
                 <h4 className="font-bold text-foreground mb-4">Services Offered</h4>
                 <ul className="space-y-2 text-foreground/70">

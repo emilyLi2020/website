@@ -17,8 +17,7 @@ export const profileData: Profile = {
       "Crisis Intervention",
       "Depressive & Anxiety Disorders",
       "Obsessive-Compulsive & Related Disorders",
-      "Trauma- & Stressor-Related Disorders",
-      "Insomnia Disorder"
+      "Trauma- & Stressor-Related Disorders"
     ],
     languages: ["English", "Mandarin"]
   },

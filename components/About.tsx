@@ -7,7 +7,7 @@ import { Languages, CheckCircle } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-white dark:bg-[#0f1419]">
+    <section id="about" className="py-16 bg-white dark:bg-[#121820]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -70,7 +70,7 @@ export default function About() {
         </div>
 
         {/* Professional Statement */}
-        <Card className="mt-16 border border-[var(--border)] bg-gradient-to-r from-[var(--soft-teal-50)] to-[var(--calm-blue-50)] dark:from-[#0f766e]/20 dark:to-[#1d4ed8]/20">
+        <Card className="mt-16 border border-[var(--border)] bg-gradient-to-br from-[var(--soft-teal-50)] via-[var(--calm-blue-50)] to-[var(--sage-green-50)] dark:from-[var(--soft-teal-50)] dark:via-[var(--calm-blue-50)] dark:to-[var(--sage-green-50)]">
           <CardContent className="p-8">
             <blockquote className="text-center">
               <p className="text-xl md:text-2xl font-medium text-foreground italic mb-4">
